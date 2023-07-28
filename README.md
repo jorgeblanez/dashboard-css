@@ -1,1 +1,1 @@
-# dashboard-css
+Dashboard lesson for TOP's course.
