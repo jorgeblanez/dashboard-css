@@ -57,8 +57,33 @@
 }
 
 .sidebar{
+  display: grid;
+  grid-template-rows: 1fr 5fr 5fr;
   grid-row:1 / 5;
   background-color: aqua;
+}
+
+.sidebarTitle,
+.itemContent,
+.itemSettings{
+  justify-self: center;
+  align-self: center;
+}
+
+.sidebarTitle{
+  display: flex;
+  font-size: 40px;
+  gap:6px;
+}
+
+.itemContent,
+.itemSettings{
+  font-size: 25px;
+  width: 170px;
+}
+
+.itemSettings{
+  align-self: start;
 }
 
 .content{
