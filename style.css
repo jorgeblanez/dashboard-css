@@ -1,48 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 *{
   margin: 0;
+  font-family:'Raleway';
 }
 
 .dashboard{
   display: grid;
   grid-template-columns: 1fr 2fr 2fr; 
-  grid-template-rows: 1fr 1fr 7fr;
+  grid-template-rows: 1fr 20fr;
 }
 .header{
   display: grid;
-  grid-template-columns: 2fr 1fr;
-  background-color: red;
+  grid-template-rows: 60px repeat(auto-fit,minmax(100px,1fr));
+  grid-template-columns: 2fr 1fr 5px;
+  background-color: #f7fee7;
   grid-column: 2 / 5;
   grid-row:1 / 3 ;
-  gap:20px
+  gap:10px;
+  color: #1a2e05;
+  padding-top: 5px;
+
+}
+
+.header svg{
+  width: 20px;
 }
 
 .header .search{
-  display: grid;
-  grid-template-columns: 1fr 10fr;
+  display: flex;
   align-items: center;
   justify-items: center;
+  gap: 10px;
+  margin-left: 30px;
 }
 
 .header .searchBar{
-  height: 12px;
-  width: 90%;
+  height: 18px;
+  width: 80%;
   border-radius: 6px;
   padding-left: 5px;
+  border:#f7fee7;
+  background-color: #d4d4d4;
 }
 
 .header .usersettings{
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
+  display: flex;
   align-items: center;
   justify-items: center;
+  font-size: 20px;
+  font-weight: 600;
+  gap: 30px;
 }
-
+.usersettings img{
+  height: 50px;
+  width: auto;
+  border: 10px;
+  border-radius: 50%;
+}
 .header .userhero{
   display: grid;
   grid-template-rows: 1fr 1fr;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 3fr;
+  grid-row: 2/3;
 }
-
+.userhero img{
+  height: 80px;
+  width: auto;
+  border: 10px;
+  border-radius: 50%;
+}
 .header .userhero .heroIcon{
   grid-row: 1/3;
   justify-self: center;
@@ -50,17 +76,47 @@
 }
 
 .header .nav{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap:12px;
+  display: flex;
+  gap:20px;
   align-items:center;
+  grid-row: 2/3;
 }
+
+.navButton{
+  background-color: #1a2e05;
+  color: #f7fee7;
+  font-size: 15px;
+  font-weight: 600;
+  border: 0px;
+  height: 30px;
+  width: 90px;
+  border-radius:20px;
+}
+.greeting{
+  font-size: 12px;
+  font-weight: 600;
+  align-self: end;
+}
+
+.heroUsername{
+  font-size: 25px;
+  font-weight: 600;
+} 
 
 .sidebar{
   display: grid;
-  grid-template-rows: 1fr 5fr 5fr;
+  grid-template-rows: 50px 5fr 10fr;
   grid-row:1 / 5;
-  background-color: aqua;
+  background-color: #3f6212;
+  color: #dcfce7;
+}
+.sidebar svg{
+  width: 50px;
+  fill: #dcfce7;
+}
+
+.items svg{
+  width: 25px;
 }
 
 .sidebarTitle,
@@ -70,24 +126,79 @@
   align-self: center;
 }
 
+
 .sidebarTitle{
+  margin-top: 30px;
   display: flex;
-  font-size: 40px;
+  font-size: 30px;
   gap:6px;
+  font-weight: 600;
 }
 
 .itemContent,
 .itemSettings{
-  font-size: 25px;
+  font-size: 20px;
+  font-weight: 600;
   width: 170px;
+  gap: 5px;
 }
 
 .itemSettings{
   align-self: start;
 }
+.items{
+  display: flex;
+  gap:20px
+}
 
 .content{
   grid-column: 2 / 5;
-  background-color: violet;
+  padding-top: 5px;
+  background-color: #ecfccb;
+  display: grid;
+  grid-template-columns: 30px 2fr 1fr;
+  grid-template-rows: 20px 1fr 1fr 20px;
+  gap: 10px;
+  box-shadow: 0 -2px 5px -5px #333;
+}
+
+.recipes{
+  grid-row: 2 / 4;
+  grid-column: 2 / 3;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(auto-fit, 1fr);
+  gap: 15px;
+  align-items: center ;
+  justify-items: center
+}
+
+.recipe{
+  background-color: lightgrey;
+  width: 350px;
+  height: 180px;
+}
+
+.title{
+  grid-column: 2 / 3;
+}
+
+.trending{
+  background-color: lightblue;
+  grid-column: 3/4;
+  grid-row: 3/4;
+  width: 220px;
+  height: 300px;
+  justify-self: center;
+}
+
+
+.announcements{
+  background-color: lightblue;
+  grid-column: 3/4;
+  grid-row: 2/3;
+  width: 220px;
+  height: 300px;
+  justify-self: center;
 }
 
