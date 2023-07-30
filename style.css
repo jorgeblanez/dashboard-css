@@ -170,35 +170,117 @@
   grid-template-rows: repeat(auto-fit, 1fr);
   gap: 15px;
   align-items: center ;
-  justify-items: center
+  justify-items: start;
 }
 
 .recipe{
-  background-color: lightgrey;
+  background-color: #f7fee7;
+  display: flex;
+  flex-direction: column;
   width: 350px;
   height: 180px;
+  border-radius: 10px;
+  box-shadow: 0px 1px 5px -1px;
+  border-left: 10px solid #1a2e05;
+  padding: 10px;
+  gap: 5px;
+  align-items: start;
+  justify-content: start;
+}
+
+.recipeIcons{
+  display: flex;
+  gap:20px;
+  justify-self:flex-end;
+  align-self: flex-end;
+  margin-top: 10px;
+}
+
+.recipeIcons svg{
+  width: 30px;
+  align-self: flex-end;
 }
 
 .title{
   grid-column: 2 / 3;
+  font-size: 20px;
+  font-weight: 600;
+  color:#1a2e05;
 }
-
-.trending{
-  background-color: lightblue;
-  grid-column: 3/4;
-  grid-row: 3/4;
-  width: 220px;
-  height: 300px;
-  justify-self: center;
-}
-
 
 .announcements{
-  background-color: lightblue;
+  background-color: #f7fee7;
+  border-radius: 10px;
+  box-shadow: 0px 1px 5px -1px;
   grid-column: 3/4;
   grid-row: 2/3;
   width: 220px;
   height: 300px;
   justify-self: center;
+  display: flex;
+  flex-direction: column;
+  gap:20px;
+  padding: 10px;
+}
+
+
+.announcementTitle,
+.trendingTitle{
+  color: #1a2e05;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+
+.announcement{
+  color: #1a2e05;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.announcement p{
+  color: #1a2e05;
+  font-size: 13px;
+  font-weight: 300;
+}
+
+.trending .user{
+  color: #1a2e05;
+  font-size: 16px;
+  font-weight: 300;
+}
+.trending{
+  background-color: #f7fee7;
+  border-radius: 10px;
+  box-shadow: 0px 1px 5px -1px;
+  grid-column: 3/4;
+  grid-row: 3/4;
+  width: 220px;
+  height: 300px;
+  justify-self: center;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  gap:30px
+}
+
+
+.user img{
+  width: 50px;
+  border: 10px;
+  border-radius: 50%;
+  grid-row: 1/3;
+  justify-self: center;
+}
+
+.trending .user{
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.user .name{
+  font-weight: 600;
+
 }
 
